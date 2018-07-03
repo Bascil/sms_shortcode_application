@@ -83,15 +83,13 @@ Download the source code as zipped
 ```
 4. Go to "https://account.africastalking.com/". Create an account then click on the `Go to Sandbox App` button
 
-5. In your sandbox account under USSD > Create Channel , pick a shared service code  such as `*384*` and a channel such as 1100 i.e `*384*1100#` (Be sure to take a unique channel which is not taken already)
+5. Configure your SMS callback URL for incoming messages (`SMS Callback URLs > Incoming Messages` ) e.g http://www.example.com/folder_name/sms.php then click `Submit`. This assumes you are working from a live server whose domain name is example.com.Replace the domain name with your own.
 
-6. Configure your SMS callback URL for incoming messages (`SMS Callback URLs > Incoming Messages` ) e.g http://www.example.com/folder_name/sms.php then click `Submit`. This assumes you are working from a live server whose domain name is example.com.Replace the domain name with your own.
+6. If working from localhost you can set up a `Ngrok` server or `Localtunnel` to expose your localhost to the internet. Use the temporary URL provided as your callback e.g  http://6a71f5ec.ngrok.io/folder_name/ussd.php. This only works when the computer is on and connected to the internet. If using `Ngrok` free package this address may change every 8 hours. You could opt for a paid version at 5 US dollars a month.
 
-7. If working from localhost you can set up a `Ngrok` server or `Localtunnel` to expose your localhost to the internet. Use the temporary URL provided as your callback e.g  http://6a71f5ec.ngrok.io/folder_name/ussd.php. This only works when the computer is on and connected to the internet. If using `Ngrok` free package this address may change every 8 hours. You could opt for a paid version at 5 US dollars a month.
+7. Go to `Settings > API key` and enter your password to generate an API key. Look for a file named `config.php` and set your username as `sandbox` and the api key as the one you have generated.
 
-8. Go to `Settings > API key` and enter your password to generate an API key. Look for a file named `config.php` and set your username as `sandbox` and the api key as the one you have generated.
-
-9. Configure an test SMS shortcode(mine was 25551). This will be used for SMS messages allow you to interact with `Africa's Talking` SMS APIs. Go to `Shortcodes > Create Shortcode` to create an SMS shortcode for testing.
+8. Configure an test SMS shortcode(mine was 25551). This will be used for SMS messages allow you to interact with `Africa's Talking` SMS APIs. Go to `Shortcodes > Create Shortcode` to create an SMS shortcode for testing.
 
 
 ### Usage
@@ -112,7 +110,7 @@ Download the source code as zipped
     
 ```
 
-10. Now test the USSD application using `Africa's Talking` android app downloaded from Google Playstore or use the web interface at https://simulator.africastalking.com:1517/ using the USSD code you configured i.e. `*384*1100#`.Make sure you configure a phone number similar to the one created in step 2.
+9. Now test the shortcode application using `Africa's Talking` android app downloaded from Google Playstore or use the web interface at https://simulator.africastalking.com:1517/ using the shortcode you configured i.e. `25551`.Make sure you configure a phone number similar to the one created in step 2.
 
 
 ## Support
