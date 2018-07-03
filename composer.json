@@ -1,0 +1,14 @@
+{
+    "name": "bascil/sms_shortcode_application",
+    "description": "A PHP application for SMS Shortcode service",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bascil",
+            "email": "basilndonga@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
